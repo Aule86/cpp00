@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aszamora <aszamora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/10 13:39:30 by aszamora          #+#    #+#             */
-/*   Updated: 2025/02/12 13:32:59 by aszamora         ###   ########.fr       */
+/*   Created: 2025/02/12 13:24:54 by aszamora          #+#    #+#             */
+/*   Updated: 2025/02/12 13:25:15 by aszamora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
-
-#include <iostream>
-#include <iomanip>
-#include <string>
 #include "Contact.hpp"
 
-#define MAX_CONTACTS 8
+Contact::Contact() {}
 
-class PhoneBook
+void Contact::set_contact(std::string fn, std::string ln, std::string nn, std::string pn, std::string ds)
 {
-public:
-	PhoneBook();
-	void add_contact(int &i);
-	//void display_contact();
-
-private:
-    Contact contacts[MAX_CONTACTS];
-    //int contact_count;
-    //void stylize(std::string str);
-};
-
-#endif
+    first_name = fn;
+    last_name = ln;
+    nickname = nn;
+    phone_number = pn;
+    darkest_secret = ds;
+}
