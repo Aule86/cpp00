@@ -6,7 +6,7 @@
 /*   By: aszamora <aszamora@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 13:13:06 by aszamora          #+#    #+#             */
-/*   Updated: 2025/02/12 13:29:02 by aszamora         ###   ########.fr       */
+/*   Updated: 2025/02/17 11:51:07 by aszamora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int	main(int argc, char **argv)
 {
 	(void) argc;
 	(void) argv;
-	int i = 0;
 	
 	PhoneBook phonebook;
 	while (1)
@@ -37,6 +36,10 @@ int	main(int argc, char **argv)
 		if (command == "EXIT")
 			break ;
 		else if (command == "ADD")
-			phonebook.add_contact(i);
+			phonebook.add_contact();
+		else if (command == "SEARCH" )
+			phonebook.search_contact();
+		else
+			std::cout << "Invalid command" << std::endl;
 	}
 }
